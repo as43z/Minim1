@@ -53,6 +53,12 @@
             <artifactId>jersey-media-moxy</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.owlike</groupId>
+            <artifactId>genson</artifactId>
+            <version>0.99</version>
+        </dependency>
+
         <!-- JUNIT -->
         <dependency>
             <groupId>junit</groupId>

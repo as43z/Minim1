@@ -1,25 +1,35 @@
 package edu.upc.eetac.dsa.models;
 
+import edu.upc.eetac.dsa.utils.RandomUtils;
+
 public class Muestra {
     private String idMuestra;
     private String idPersona;
     private String idClinico;
     private String idLaboratorio;
+    private String fechaExtraccion;
+    private boolean isProcesada;
     private String sPosNeg;
     private String descripcion;
 
-    public Muestra(String idMuestra, String idPersona, String idClinico, String idLaboratorio){
+    public Muestra(String idMuestra, String idPersona, String idLaboratorio,
+                   String fechaExtraccion){
         this.idMuestra = idMuestra;
         this.idPersona = idPersona;
-        this.idClinico = idClinico;
+        this.idClinico = RandomUtils.getId();
         this.idLaboratorio = idLaboratorio;
+        this.fechaExtraccion = fechaExtraccion;
+        this.isProcesada = false;
     }
 
-    public Muestra(String idPersona, String idClinico, String idLaboratorio){
-        this.idMuestra = ""; //Random
+    public Muestra(String idPersona, String idLaboratorio,
+                   String fechaExtraccion){
+        this.idMuestra = RandomUtils.getId(); //Random
         this.idPersona = idPersona;
-        this.idClinico = idClinico;
+        this.idClinico = RandomUtils.getId();
         this.idLaboratorio = idLaboratorio;
+        this.fechaExtraccion = fechaExtraccion;
+        this.isProcesada = false;
     }
 
     public String getIdMuestra() {
@@ -68,5 +78,27 @@ public class Muestra {
 
     public void setIdLaboratorio(String idLaboratorio) {
         this.idLaboratorio = idLaboratorio;
+    }
+
+    public boolean isProcesada() {
+        return isProcesada;
+    }
+
+    public void setProcesada(boolean procesada) {
+        isProcesada = procesada;
+    }
+
+    public String getFechaExtraccion() {
+        return fechaExtraccion;
+    }
+
+    public void setFechaExtraccion(String fechaExtraccion) {
+        this.fechaExtraccion = fechaExtraccion;
+    }
+
+    public void procesarMuestra(String sPosNeg, String descripcion){
+        this.isProcesada = true;
+        this.sPosNeg = sPosNeg;
+        this.descripcion = descripcion;
     }
 }

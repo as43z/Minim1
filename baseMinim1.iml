@@ -42,6 +42,7 @@
     <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.core:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.asm:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish:javax.json:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: com.owlike:genson:0.99" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.9" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-jersey2-jaxrs:1.5.9" level="project" />

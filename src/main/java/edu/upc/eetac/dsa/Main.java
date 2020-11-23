@@ -35,7 +35,7 @@ public class Main {
         BeanConfig beanConfig = new BeanConfig();
 
         beanConfig.setHost("localhost:8080");
-        beanConfig.setBasePath("/minim1DSA");
+        beanConfig.setBasePath("/minim1");
         beanConfig.setContact("albert.saez.nunez@estudiantat.upc.edu");
         beanConfig.setDescription("REST API for Covid Manager by Marc Xapelli");
         beanConfig.setLicenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html");

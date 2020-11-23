@@ -1,11 +1,17 @@
 package edu.upc.eetac.dsa.models;
 
+import edu.upc.eetac.dsa.utils.RandomUtils;
+
+import java.util.LinkedList;
+import java.util.List;
+
 public class Persona {
     private String idPersona;
     private String nombre;
     private String apellidos;
     private String fechaNacimiento;
     private String nivelSalud; //(A, B, C, D)
+    private List<Muestra> muestrasRealizadas;
 
     public Persona(String idPersona, String nombre, String apellidos,
                    String fechaNacimiento, String nivelSalud){
@@ -15,16 +21,18 @@ public class Persona {
         this.apellidos = apellidos;
         this.fechaNacimiento = fechaNacimiento;
         this.nivelSalud = nivelSalud;
+        this.muestrasRealizadas = new LinkedList<>();
     }
 
     public Persona(String nombre, String apellidos,
                    String fechaNacimiento, String nivelSalud){
 
-        this.idPersona = ""; //randomID()
+        this.idPersona = RandomUtils.getId(); //randomID()
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.fechaNacimiento = fechaNacimiento;
         this.nivelSalud = nivelSalud;
+        this.muestrasRealizadas = new LinkedList<>();
     }
 
     public String getIdPersona() {
@@ -65,5 +73,17 @@ public class Persona {
 
     public void setNivelSalud(String nivelSalud) {
         this.nivelSalud = nivelSalud;
+    }
+
+    public List<Muestra> getMuestrasRealizadas() {
+        return muestrasRealizadas;
+    }
+
+    public void setMuestrasRealizadas(List<Muestra> muestrasRealizadas) {
+        this.muestrasRealizadas = muestrasRealizadas;
+    }
+
+    public void addMuestraRealizada(Muestra muestra){
+        this.muestrasRealizadas.add(muestra);
     }
 }
