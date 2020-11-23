@@ -4,19 +4,22 @@ public class Muestra {
     private String idMuestra;
     private String idPersona;
     private String idClinico;
+    private String idLaboratorio;
     private String sPosNeg;
     private String descripcion;
 
-    public Muestra(String idMuestra, String idPersona, String idClinico){
+    public Muestra(String idMuestra, String idPersona, String idClinico, String idLaboratorio){
         this.idMuestra = idMuestra;
         this.idPersona = idPersona;
         this.idClinico = idClinico;
+        this.idLaboratorio = idLaboratorio;
     }
 
-    public Muestra(String idPersona, String idClinico){
+    public Muestra(String idPersona, String idClinico, String idLaboratorio){
         this.idMuestra = ""; //Random
         this.idPersona = idPersona;
         this.idClinico = idClinico;
+        this.idLaboratorio = idLaboratorio;
     }
 
     public String getIdMuestra() {
@@ -57,5 +60,13 @@ public class Muestra {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getIdLaboratorio() {
+        return idLaboratorio;
+    }
+
+    public void setIdLaboratorio(String idLaboratorio) {
+        this.idLaboratorio = idLaboratorio;
     }
 }
